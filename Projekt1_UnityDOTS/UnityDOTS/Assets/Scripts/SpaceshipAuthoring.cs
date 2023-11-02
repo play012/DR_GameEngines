@@ -5,14 +5,20 @@ using Unity.Entities;
 
 public class SpaceshipAuthoring : MonoBehaviour
 {
-    public float value;
+    public float speedVal;
 }
 
 public class SpaceshipBaker : Baker<SpaceshipAuthoring>
 {
     public override void Bake(SpaceshipAuthoring authoring) {
+        Entity entity = GetEntity(TransformUsageFlags.Dynamic);
         AddComponent(new Spaceship {
-            value = authoring.value
+            speedVal = authoring.speedVal
         });
     }
+}
+
+public struct Spaceship : IComponentData
+{
+    public float speedVal;
 }
