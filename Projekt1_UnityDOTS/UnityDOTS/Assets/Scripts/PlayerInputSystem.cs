@@ -6,6 +6,7 @@ using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;
 
+[BurstCompile]
 public partial struct PlayerInputSystem : ISystem
 {
     [BurstCompile]

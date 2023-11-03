@@ -6,13 +6,19 @@ using TMPro;
 public class FPSCounter : MonoBehaviour
 {
     int timer;
-    // Update is called once per frame
+    TMP_Text fpsText;
+    
+    void Start()
+    {
+        fpsText = GetComponent<TMP_Text>();
+    }
+    
     void Update()
     {
         timer++;
         if (timer > 30) {
             int fps = (int)(1f / Time.unscaledDeltaTime);
-            GetComponent<TMP_Text>().text = "Entities: 0\nFPS: " + fps.ToString();
+            fpsText.text = "\nFPS: " + fps.ToString();
             timer = 0;
         }
     }
