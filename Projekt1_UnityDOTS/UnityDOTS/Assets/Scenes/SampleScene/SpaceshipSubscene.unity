@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 10
-  enemyPrefab: {fileID: 4224491355611818618, guid: 9921c719ac3a89c4396dde4e02d62386,
+  enemyPrefab: {fileID: 1128205824419752780, guid: 9921c719ac3a89c4396dde4e02d62386,
     type: 3}
   randomSeed: 100
 --- !u!1 &1590141419
@@ -261,7 +261,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590141419}
-  m_Mesh: {fileID: 944696844918605244, guid: 2502321cbb53345368e92d43c697a353, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 7db8fc1b11bdb40749fed9f1361350bc, type: 3}
 --- !u!4 &1590141423
 Transform:
   m_ObjectHideFlags: 0
@@ -270,13 +270,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590141419}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.037007138, y: 0.7061377, z: 0.7061377, w: 0.037007138}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 174, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1590141425
 MonoBehaviour:
   m_ObjectHideFlags: 0
