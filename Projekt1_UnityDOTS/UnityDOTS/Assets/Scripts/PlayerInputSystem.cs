@@ -5,6 +5,8 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;
+using Unity.Physics;
+using Unity.Physics.Systems;
 
 [BurstCompile]
 public partial struct PlayerInputSystem : ISystem

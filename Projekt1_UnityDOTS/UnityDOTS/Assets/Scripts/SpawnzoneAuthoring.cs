@@ -6,33 +6,25 @@ using Unity.Mathematics;
 
 public class SpawnzoneAuthoring : MonoBehaviour
 {
-    public int spawnRadius;
-    public GameObject enemyPrefab;
-    public uint randomSeed;
+    public GameObject enemyGO;
 }
 
 public class SpawnzoneBaker : Baker<SpawnzoneAuthoring>
 {
     public override void Bake(SpawnzoneAuthoring spawnAuth) {
+        var transform = GetComponent<Transform>();
         Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-        AddComponent(new Spawnzone {
-            spawnRadius = spawnAuth.spawnRadius,
-            enemyPrefab = GetEntity(spawnAuth.enemyPrefab)
-        });
-
-        AddComponent(new SpawnzoneRandom {
-            randValue = Unity.Mathematics.Random.CreateFromIndex(spawnAuth.randomSeed)
+        AddComponent(entity, new Spawnzone {
+            enemyEntity = GetEntity(spawnAuth.enemyGO, TransformUsageFlags.Dynamic),
+            Position = transform.position,
+            Rotation = transform.rotation
         });
     }
 }
 
 public struct Spawnzone : IComponentData
 {
-    public int spawnRadius;
-    public Entity enemyPrefab;
-}
-
-public struct SpawnzoneRandom : IComponentData
-{
-    public Unity.Mathematics.Random randValue;
+    public Entity enemyEntity { get; set; }
+    public float3 Position { get; set; }
+    public quaternion Rotation { get; set; }
 }
