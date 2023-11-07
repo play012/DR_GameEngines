@@ -6,6 +6,7 @@ using Unity.Entities;
 public class SpaceshipAuthoring : MonoBehaviour
 {
     public float speedVal;
+    public bool exploding;
 }
 
 public class SpaceshipBaker : Baker<SpaceshipAuthoring>
@@ -13,7 +14,8 @@ public class SpaceshipBaker : Baker<SpaceshipAuthoring>
     public override void Bake(SpaceshipAuthoring authoring) {
         Entity entity = GetEntity(TransformUsageFlags.Dynamic);
         AddComponent(new Spaceship {
-            speedVal = authoring.speedVal
+            speedVal = authoring.speedVal,
+            exploding = authoring.exploding
         });
     }
 }
@@ -21,4 +23,5 @@ public class SpaceshipBaker : Baker<SpaceshipAuthoring>
 public struct Spaceship : IComponentData
 {
     public float speedVal;
+    public bool exploding;
 }

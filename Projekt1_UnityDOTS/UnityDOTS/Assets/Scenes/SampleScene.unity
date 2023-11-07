@@ -971,10 +971,10 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &963043001
@@ -1535,7 +1535,7 @@ GameObject:
   - component: {fileID: 1668991201}
   - component: {fileID: 1668991200}
   m_Layer: 0
-  m_Name: SpaceshipLineRenderer
+  m_Name: SpaceshipManager
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1553,6 +1553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ae8cefaec75483a9fdda61f5d39ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceshipLR: {fileID: 1668991201}
+  explosionGO: {fileID: 963043001}
+  explosionVP: {fileID: 960263320}
 --- !u!120 &1668991201
 LineRenderer:
   serializedVersion: 2
