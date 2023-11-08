@@ -7,7 +7,7 @@ using Unity.Transforms;
 using Unity.Mathematics;
 
 [BurstCompile]
-public partial struct DestroyEnemySystem : ISystem
+public partial struct ResetEnemySystem : ISystem
 {
     [BurstCompile]
     public void OnUpdate(ref SystemState state)

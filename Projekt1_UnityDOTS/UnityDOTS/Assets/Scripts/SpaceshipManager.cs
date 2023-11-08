@@ -56,7 +56,7 @@ public class SpaceshipManager : MonoBehaviour
     {
         explosionGO.SetActive(false);
         spaceshipLR.enabled = true;
-        eM.SetComponentData<LocalTransform>(spaceshipEntity, LocalTransform.FromPositionRotationScale(new float3(0, 0, 0), quaternion.Euler(-90, 0, 0), 1f));
+        eM.SetComponentData<LocalTransform>(spaceshipEntity, new LocalTransform {Position = new float3(0, 0, 0), Rotation = quaternion.Euler(-90, 0, 0), Scale = 1f});
         eM.SetComponentData<Spaceship>(spaceshipEntity, new Spaceship {speedVal = 0.02f, exploding = false} );
     }
 }

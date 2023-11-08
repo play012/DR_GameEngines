@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000036012512, g: 0.0060110167, b: 0.03126121, a: 1}
+  m_IndirectSpecularColor: {r: 0.00003603795, g: 0.0060186735, b: 0.031279225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -949,7 +949,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960263318}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 9e8d86ecf487a9f45b1ddd98bceb6aa5, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 7b5951bc7fe094b1288d09a1e9a5a35b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -963,14 +963,12 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -989,7 +987,6 @@ GameObject:
   - component: {fileID: 963043004}
   - component: {fileID: 963043003}
   - component: {fileID: 963043002}
-  - component: {fileID: 963043006}
   m_Layer: 5
   m_Name: WorldSpaceCanvas
   m_TagString: Untagged
@@ -1081,18 +1078,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &963043006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963043001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79e34a4f5a6a9640a29f4d81570856c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &980521045
 GameObject:
   m_ObjectHideFlags: 0
