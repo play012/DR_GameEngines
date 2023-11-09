@@ -31,11 +31,6 @@ public partial struct PlayerInputSystem : ISystem
             if (Input.GetKey(KeyCode.D) && transform.ValueRW.Position.x >= -1.0f) {
                 transform.ValueRW = transform.ValueRO.Translate(new float3(-spaceship.ValueRO.speedVal, 0, 0));
             }
-
-            //TEST
-            if(Input.GetKey(KeyCode.Space) && !spaceship.ValueRO.exploding) {
-                spaceship.ValueRW.exploding = true;
-            }
         }
     }
 }
